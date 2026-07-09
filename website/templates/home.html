@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">✦ Available for work</span>
+            <h1>Hi, I’m <span class="highlight">Himanshu</span><br />Creative Developer</h1>
+            <p>I craft digital experiences with clean code and modern design.</p>
+            <div class="hero-actions">
+                <a href="{% url 'about' %}" class="btn btn-primary">About Me</a>
+                <a href="{% url 'contact' %}" class="btn btn-outline">Let’s Talk</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">Some of my recent work — each built with passion.</p>
+
+        <div class="project-grid">
+            <!-- Project 1: Ecommerce -->
+            <div class="project-card">
+                <img src="{% static 'image/ecommerce-logo-design-vector.jpg' %}" alt="Ecommerce">
+                <div class="card-body">
+                    <h3>Ecommerce</h3>
+                    <p>Full-featured online store with payments and admin.</p>
+                    <span class="card-tag">#Django</span>
+                </div>
+            </div>
+            <!-- Project 2: Blog -->
+            <div class="project-card">
+                <img src="{% static 'image/online-content-writing-flat-icon-of-blogging-vector.jpg' %}" alt="Blog">
+                <div class="card-body">
+                    <h3>Blog Platform</h3>
+                    <p>Markdown-based CMS with categories and tags.</p>
+                    <span class="card-tag">#Vue</span>
+                </div>
+            </div>
+            <!-- Project 3: Agriculture -->
+            <div class="project-card">
+                <img src="{% static 'image/agriculture-logos-design-template-e04c63bb1a464801b27c602fed3c435a_screen.jpg' %}" alt="Agriculture">
+                <div class="card-body">
+                    <h3>Agriculture</h3>
+                    <p>Smart farming – crop monitoring and yield prediction.</p>
+                    <span class="card-tag">#IoT</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="{% static 'image/766ceb183024179.6538308e2e84a.webp' %}" alt="Agriculture">
+                <div class="card-body">
+                    <h3>Agriculture</h3>
+                    <p>Smart farming – crop monitoring and yield prediction.</p>
+                    <span class="card-tag">#IoT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

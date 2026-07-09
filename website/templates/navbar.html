@@ -1,0 +1,17 @@
+{% load static %}
+<header class="header">
+    <div class="container">
+        {% comment %} <a href="{% url 'home' %}" class="logo">
+            <img src="{% static 'image/himanshu.jpeg' %}" alt="Logo" height="40">
+        </a> {% endcomment %}
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        <nav>
+            <ul class="nav-list" id="navList">
+                <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

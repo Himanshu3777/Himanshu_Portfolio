@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    I'm a creative developer with a deep passion for building
+                    digital products that are both beautiful and functional.
+                    With a background in full‑stack development, I love bringing
+                    ideas to life through clean code and thoughtful design.
+                </p>
+                <p>
+                    Whether it's a portfolio, an e‑commerce site, or a real‑time
+                    application — I approach every project with curiosity,
+                    precision, and a commitment to excellence.
+                </p>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="num">4+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num">30+</div>
+                        <div class="label">Projects Delivered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="num">12</div>
+                        <div class="label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <!-- यहाँ आपकी अपनी फोटो डालें (image folder में होनी चाहिए) -->
+                <img src="{% static 'image/sarkar.jpeg' %}" alt="Himanshu" />
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
