@@ -24,3 +24,9 @@ def submit_form(request):
         else:
             return HttpResponse("plase provided all data");
     return redirect('contact') # contact yah urls.py me contact url ka nam hai contact
+
+
+
+def messages_view(request):
+    data = Pickdata.objects.all().order_by('-id')
+    return render(request, 'messages.html', {'data': data})
