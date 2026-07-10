@@ -12,12 +12,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fdk9%wp#h_u)$k8g^89ol!8w!w)xs4#9oqh#hv__1df68s7lxp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
 
+DEBUG = False
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "himanshu-portfolio-1.onrender.com",
+]
 
 
 # Application definition
