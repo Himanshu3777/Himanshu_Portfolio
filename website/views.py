@@ -26,7 +26,12 @@ def submit_form(request):
     return redirect('contact') # contact yah urls.py me contact url ka nam hai contact
 
 
-
-def messages_view(request):
-    data = Pickdata.objects.all().order_by('-id')
-    return render(request, 'messages.html', {'data': data})
+    def messages_view(request):
+    try:
+        # कोशिश करें data fetch करने की
+        data = Pickdata.objects.all().order_by('-id')
+        return render(request, 'messages.html', {'data': data})
+    except Exception as e:
+        # अगर कोई error आता है, तो उसे पूरा print करके दिखा दें
+        error_details = traceback.format_exc()
+        return HttpResponse(f"<h1>❌ Server Error Details</h1><pre>{error_details}</pre>", status=500)
